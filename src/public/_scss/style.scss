@@ -1,0 +1,35 @@
+$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import "bootstrap";
+
+//** planing, design, develop, qa, ready
+
+.label-planing {
+  //** Default label background color
+  @extend .label-default;
+}
+.label-design{
+  //** Primary label background color
+  @extend .label-primary;
+}
+
+.label-develop {
+  //** Info label background color
+  @extend .label-info;
+}
+
+.label-qa {
+  //** Success label background color
+  @extend .label-warning;
+}
+
+.label-ready {
+  //** Warning label background color
+  @extend .label-success;
+}
+.browser-success {
+  color: $label-success-bg;
+}
+
+.browser-fail {
+  color: $label-danger-bg;
+}

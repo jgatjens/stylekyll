@@ -1,0 +1,39 @@
+{
+  "name": "cafebritt",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Yeoman workflow for cafebritt",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^1.1.1",
+    "del": "^0.1.0",
+    "gulp": "^3.8.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-cache": "~0.2.0",
+    "gulp-cached": "^1.0.1",
+    "gulp-changed": "^0.4.0",
+    "gulp-filter": "^0.5.0",
+    "gulp-gzip": "0.0.8",
+    "gulp-htmlmin": "^0.2.0",
+    "gulp-if": "^1.2.2",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jshint": "^1.6.3",
+    "gulp-load-plugins": "^0.5.2",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-rev-all": "^0.6.4",
+    "gulp-rev-replace": "^0.2.1",
+    "gulp-rsync": "0.0.2",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-shell": "^0.2.7",
+    "gulp-size": "^0.4.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-uncss": "^0.4.4",
+    "gulp-useref": "^0.5.0",
+    "jshint-stylish": "^0.4.0",
+    "merge-stream": "^0.1.5"
+  },
+  "engines": {
+    "node": ">0.10.0"
+  },
+  "scripts": {}
+}
