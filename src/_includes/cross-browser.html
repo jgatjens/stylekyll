@@ -1,0 +1,13 @@
+{% for browser in page.browsers %}
+    {% for browse in browser %}
+        <label
+          class=" {% if browse[1] %}
+                    browser-success
+                  {% else %}
+                    browser-fail
+                  {% endif %}">
+
+                  <i class="icon-{{browse[0]}}"></i>{{browse[0]}}
+        </label>
+    {% endfor %}
+{% endfor %}
