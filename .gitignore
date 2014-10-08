@@ -1,4 +1,4 @@
-# .gitignore for jekyllized projects
+# .gitignore
 
 # Ignore hidden folders
 # This takes care of .tmp, .sass-cache, and many others
@@ -16,30 +16,9 @@ Gemfile.lock
 .Trashes
 Icon
 
-# Windows
-Desktop.ini
-ehthumbs.db
-Thumbs.db
-
 # Linux
 *~
 
-# Tags
-# Ignore tags created by etags and ctags
-TAGS
-tags
-
-# Always-ignore files and folders #
-*.diff
-*.err
-*.log
-*.orig
-*.rej
-*.swn
-*.swo
-*.swp
-._*
-*~
 
 # Ignore packages #
 *.7z
@@ -54,19 +33,10 @@ tags
 # Packages
 node_modules/*
 .tmp
-test/
 
-# Sublime
-*.sublime-project
-*.sublime-workspace
-*.sublime-projectcompletions
-
+# bower
 src/bower_components
 
 # Output folders
-serve
 site
 
-# hide the AWS and Rsync credentials file
-aws-credentials.json
-rsync-credentials.json
