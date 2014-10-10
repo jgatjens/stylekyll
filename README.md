@@ -1,5 +1,4 @@
 # Styleguide Template
---------------
 
 ## Description
 
