@@ -1,43 +1,22 @@
-// Main styles
-// =============
+// uncomment this and gulp [sass] task the require line to include bootstrap-sass
+// @import "bootstrap";
 
-// Long description of the css methodology
+// If you are going to use boostrap we need to override the font path
+// $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-@import "bootstrap";
 
-//** planing, design, develop, qa, ready
-.label-planing {
-  //** Default label background color
-  @extend .label-default;
-}
-.label-design{
-  //** Primary label background color
-  @extend .label-primary;
-}
+// Modules
+//
+// Reusable elements that can be used across the site.
+// So far this just includes buttons.
+//
+// Styleguide 1.
+@import "./elements/buttons.scss";
 
-.label-develop {
-  //** Info label background color
-  @extend .label-info;
-}
-
-.label-qa {
-  //** Success label background color
-  @extend .label-warning;
-}
-
-.label-ready {
-  //** Warning label background color
-  @extend .label-success;
-}
-.browser-success {
-  color: $label-success-bg;
-}
-
-.browser-fail {
-  color: $label-danger-bg;
-}
-
-body {
-  // background-color: black !important;
-}
+// Forms
+//
+// Covers styles used for forms, such as the `<input>` and `<select>`
+// elements.
+//
+// Styleguide 2.
+@import "./forms/base.scss";

@@ -39,9 +39,10 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('public/_scss/style.scss')
+    return gulp.src('public/_scss/*.scss')
         .pipe(sass({
-            // sourcemapPath: ['./scss'],
+            sourcemap: 'auto',
+            sourcemapPath: '_site/public/css',
             require: ['bootstrap-sass']
          }))
         .on('error', browserSync.notify)
@@ -57,7 +58,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('public/_scss/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', 'pages/**/*.html' , '_layouts/*.html'], ['jekyll-rebuild']);
 });
 
 /**

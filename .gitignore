@@ -34,9 +34,7 @@ Icon
 node_modules/*
 .tmp
 
-# bower
-src/bower_components
 
 # Output folders
-site
+_site
 

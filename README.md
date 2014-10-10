@@ -1,64 +1,36 @@
-# {{ site.name }}
+# Styleguide Template
+--------------
 
 ## Description
 
-Project created with [*jekyll-gulp-sass-browser-sync*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync).
-
-And edited to add [*Bootstrap Sass
-
-*](https://github.com/twbs/bootstrap-sass) 
+Template created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
+[*kss-node*](https://github.com/kss-node/kss-node),
+[*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
+[*bootstrap-sass*](https://github.com/twbs/bootstrap-sass).
 
 ## Dependencies
 
-In order to work with the project, you will need to follow this instructions:
+In order to work with the template, you will need to follow tools:
+- [*Ruby*](https://www.ruby-lang.org/en/).
+- [*Nodejs*](http://nodejs.org/).
+- [*Xcode command line tools *](https://developer.apple.com/xcode/). (if you are on Mac)
 
-* Download and install [*Xcode command line tools *](https://developer.apple.com/xcode/)
 
-    Install Xcode command line tools (you need to have a paid iOS developer account to be able to download it).
+## Instructions:
+
+* Download and install [*Xcode command line tools *](https://developer.apple.com/xcode/). (if you are on Mac)
 
 * Download and install [*RVM*](https://rvm.io/rvm/install)
 
-    CM network blocks some ports, you will need to run this outside of the CM network for it to work. If you're a THI dev, you can do this joining the THIFirstClass wireless network.
-
-* Run the following command to install it:
+    Run the following command to install rvm it:
 
         $ \curl -sSL https://get.rvm.io | bash
 
-* Then update Ruby to the 1.9.7 version 
+* Then update Ruby to the 2.0.0 or higer version 
 
         $ rvm install 2.0.0
 
-    If you get the following error:
-
-        Checking requirements for osx.
-
-        Installing macports...............................user password required for 'make install':
-
-        ........................
-
-        -bash: port: command not found
-
-    Please make sure you have the following line on your .bash_profile:
-
-        $ export PATH="/opt/local/bin:$PATH"
-
-    If you don't you can run the following commands:
-
-        $ nano ~/.bash_profile
-
-    Add the following line:
-
-        $ export PATH="/opt/local/bin:$PATH"
-
-    Then hit control + x, hit Y, hit enter.
-
-    Then run:
-
-        $ source ~/.bash_profile
-
-    And try again.
-
-* Choose  2.0.0 as the default Ruby for RVM
+* Choose ^2.0.0 as the default Ruby for RVM
 
         $ rvm --default use 2.0.0
 
@@ -76,10 +48,29 @@ In order to work with the project, you will need to follow this instructions:
 
         $ bower install
 
-* Then you need to install the gulp dependencies, please run:
+* Then you need to install the node dependencies, please run:
 
         $ npm install
 
-...and you're done. To see you're project running please run:
+    ...and you're done. 
+    
 
-        $ gulp
+### How to run it
+
+To see you're project running please run:
+
+    $ gulp
+
+Compiling styleguides 
+    
+    $ kss-node public/_scss _site/styleguide --sass --template _template-kss
+ 
+Compiling styleguides including bootstrap-sass 
+    
+    $ kss-node public/_scss _site/styleguide --sass bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap --template _template-kss
+
+
+[*Kss documentation*](http://warpspire.com/kss/syntax/)
+
+Thanks
+
