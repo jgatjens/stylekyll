@@ -1,4 +1,4 @@
-# CafeBritt Styleguide 
+# Stylekyll Template 
 --------------
 
 ## Description
