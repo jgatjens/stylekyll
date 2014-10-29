@@ -3,14 +3,14 @@
 
 ## Description
 
-Template created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
+Template created with [*jekyll*](http://jekyllrb.com/),
 [*kss-node*](https://github.com/kss-node/kss-node),
-[*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
+[*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and 
 [*gulp*](http://gulpjs.com).
 
 ## Dependencies
 
-In order to work with the template, you will need to follow tools:
+In order to run stylekyll, you will need the following tools:
 - [*Ruby*](https://www.ruby-lang.org/en/).
 - [*Nodejs*](http://nodejs.org/).
 - [*Xcode command line tools *](https://developer.apple.com/xcode/). (if you are on Mac)
@@ -56,9 +56,9 @@ In order to work with the template, you will need to follow tools:
     
 ### How to run it
 
-To see you're project running please run:
+To see your project running please run:
 
-    $ gulp
+    $ gulp serve
 
 Compiling styleguides 
     
