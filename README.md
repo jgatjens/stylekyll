@@ -34,8 +34,6 @@ In order to run stylekyll, you will need the following tools:
 
         $ rvm --default use 2.0.0
 
-* Download and install [*Node.JS*](http://nodejs.org/)
-
 * With this done, you have to install the following Gem:
     
         gem install bundler
@@ -47,6 +45,8 @@ In order to run stylekyll, you will need the following tools:
 * After installing all the gems, you should update the bower devependencies, please run:
 
         $ bower install
+
+* Download and install [*Node.JS*](http://nodejs.org/)
 
 * Then you need to install the node dependencies, please run:
 
