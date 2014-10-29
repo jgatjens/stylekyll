@@ -1,11 +1,12 @@
-# Styleguide Template
+# CafeBritt Styleguide 
+--------------
 
 ## Description
 
 Template created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
 [*kss-node*](https://github.com/kss-node/kss-node),
 [*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
-[*bootstrap-sass*](https://github.com/twbs/bootstrap-sass).
+[*gulp*](http://gulpjs.com).
 
 ## Dependencies
 
@@ -19,7 +20,7 @@ In order to work with the template, you will need to follow tools:
 
 * Download and install [*Xcode command line tools *](https://developer.apple.com/xcode/). (if you are on Mac)
 
-* Download and install [*RVM*](https://rvm.io/rvm/install)
+* Download and install [*RVM*](https://rvm.io/rvm/install) (Ruby version Manager is optional)
 
     Run the following command to install rvm it:
 
@@ -53,7 +54,6 @@ In order to work with the template, you will need to follow tools:
 
     ...and you're done. 
     
-
 ### How to run it
 
 To see you're project running please run:
@@ -62,14 +62,17 @@ To see you're project running please run:
 
 Compiling styleguides 
     
-    $ kss-node public/_scss _site/styleguide --sass --template _template-kss
- 
-Compiling styleguides including bootstrap-sass 
-    
-    $ kss-node public/_scss _site/styleguide --sass bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap --template _template-kss
-
+    $ kss-node public/_scss _site/styleguide --sass --template _template-kss 
 
 [*Kss documentation*](http://warpspire.com/kss/syntax/)
+
+
+### Deploy to github pages
+
+We have created a rake task to deploy the templates and the styleguide to gitgub.
+
+    $ rake stylekyll:publish
+
 
 Thanks
 
