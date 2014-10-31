@@ -1,16 +1,18 @@
-# Stylekyll Template 
+# Stylekyll  
 --------------
 
 ## Description
 
-Template created with [*jekyll*](http://jekyllrb.com/),
+Starter repo to make html, css and javascript templates pretty documented for web designer and backend developer
+
+Template created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
 [*kss-node*](https://github.com/kss-node/kss-node),
-[*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and 
-[*gulp*](http://gulpjs.com).
+[*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
+[*bootstrap-sass*](https://github.com/twbs/bootstrap-sass).
 
 ## Dependencies
 
-In order to run stylekyll, you will need the following tools:
+In order to work with the template, you will need to follow tools:
 - [*Ruby*](https://www.ruby-lang.org/en/).
 - [*Nodejs*](http://nodejs.org/).
 - [*Xcode command line tools *](https://developer.apple.com/xcode/). (if you are on Mac)
@@ -34,6 +36,8 @@ In order to run stylekyll, you will need the following tools:
 
         $ rvm --default use 2.0.0
 
+* Download and install [*Node.JS*](http://nodejs.org/)
+
 * With this done, you have to install the following Gem:
     
         gem install bundler
@@ -42,27 +46,26 @@ In order to run stylekyll, you will need the following tools:
     
         $ bundle install
 
-* After installing all the gems, you should update the bower devependencies, please run:
-
-        $ bower install
-
-* Download and install [*Node.JS*](http://nodejs.org/)
 
 * Then you need to install the node dependencies, please run:
 
-        $ npm install
+        $ npm install --global gulp && npm install --global bower && npm install
 
+* After installing all the gems, you should update the bower devependencies, please run:
+
+        $ bower install
+        
     ...and you're done. 
     
 ### How to run it
 
 To see your project running please run:
 
-    $ gulp serve
+    $ gulp
 
 Compiling styleguides 
     
-    $ kss-node public/_scss _site/styleguide --sass --template _template-kss 
+    $ kss-node assets/_scss _site/styleguide --sass --template _template-kss 
 
 [*Kss documentation*](http://warpspire.com/kss/syntax/)
 

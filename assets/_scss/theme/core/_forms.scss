@@ -1,0 +1,198 @@
+// Basic Example
+//
+// Markup:
+// <form role="form">
+//   <div class="form-group">
+//     <label for="exampleInputEmail1">Default Field</label>
+//     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your text here">
+//   </div>
+//   <div class="form-group has-error">
+//     <label for="exampleInputPassword1">Error Field</label>
+//     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your text here">
+//     <p><label class="text-danger">Some error message</label></p>
+//   </div>
+//   <button type="submit" class="btn btn-primary btn-block">Add to cart</button>
+// </form>
+//
+// Styleguide 5.1
+
+
+.has-error input {
+  background-color: rgba(red, 0.1);
+}
+
+// Custom checkboxes
+//
+// Markup:
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox">
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" value="None" id="custom-checkbox-1" name="check" />
+//          <label for="custom-checkbox-1"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content</label>
+//     </div>
+//   </div>
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox">
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" checked value="None" id="custom-checkbox-2" name="check" />
+//          <label for="custom-checkbox-2"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content active</label>
+//     </div>
+//   </div>
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox disabled">
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" disabled value="None" id="custom-checkbox-3" name="check" />
+//          <label for="custom-checkbox-3"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content disabled</label>
+//     </div>
+//   </div>
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox checkbox-lg">  <!-- .checkbox-lg -->
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" value="None" id="custom-checkbox-4" name="check" />
+//          <label for="custom-checkbox-4"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content</label>
+//     </div>
+//   </div>
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox checkbox-lg">   <!-- .checkbox-lg -->
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" checked value="None" id="custom-checkbox-5" name="check" />
+//          <label for="custom-checkbox-5"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content active</label>
+//     </div>
+//   </div>
+//   <div class="form-group bg-default">
+//     <!-- Custom Checkbox -->
+//     <div class="custom-checkbox checkbox-lg disabled"> <!-- .checkbox-lg -->
+//        <div class="custom-checkbox-square">
+//          <input type="checkbox" disabled value="None" id="custom-checkbox-6" name="check" />
+//          <label for="custom-checkbox-6"></label>
+//        </div>
+//        <label class="checkbox-label" for="text">Some content disabled</label>
+//     </div>
+//   </div>
+//
+// Styleguide 5.2
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* Custom Checkbox */
+$custom-checkbox-size: 20px;
+
+.custom-checkbox {
+
+  &.disabled {
+    @include opacity(0.3);
+  }
+
+  $custom-checkbox-size: $custom-checkbox-size + 10;
+  &.checkbox-lg {
+    .custom-checkbox-square {
+      width: $custom-checkbox-size;
+      height: $custom-checkbox-size;
+
+      label {
+        width: $custom-checkbox-size;
+        height: $custom-checkbox-size;
+      }
+    }
+    .checkbox-label {
+      line-height: $custom-checkbox-size;
+    }
+  }
+
+}
+
+
+/* Custom Checkbox */
+.custom-checkbox-square {
+  width: $custom-checkbox-size;
+  height: $custom-checkbox-size;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+.custom-checkbox-square label {
+  cursor: pointer;
+  position: absolute;
+  width: $custom-checkbox-size;
+  height: $custom-checkbox-size;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: solid 1px $tertiary-color;
+}
+
+.custom-checkbox-square label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  background: transparent;
+  top: 30%;
+  left: 27%;
+  border: 3px solid $secondary-accent-color;
+  border-top: none;
+  border-right: none;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.custom-checkbox-square label:hover::after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+
+.custom-checkbox-square input[type=checkbox]:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+
+.checkbox-label {
+  line-height: $custom-checkbox-size;
+  margin: 0;
+  padding-left: $padding-base-horizontal;
+  color: $tertiary-color;
+}
+
+// Remove outline on chrome
+// textarea:hover,
+// input:hover,
+// textarea:active,
+// input:active,
+// textarea:focus,
+// input:focus,
+// button:focus,
+// button:active,
+// button:hover {
+//     outline:0px !important;
+//     -webkit-appearance:none;
+// }
+
+

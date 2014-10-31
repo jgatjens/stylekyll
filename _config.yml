@@ -1,9 +1,8 @@
-# Title, decription, tagline and URL for your site
-# Can be used in your theme by calling 'site.title' and so on
-
-title: site
-name: site name
-description: site description
+title: stylekyll
+name: stylekyll
+company: freelance
+baseurl: "/github-repo-name"
+description: "starter repo to make html, css and javascript templates pretty documented for web designer and backend developer"
 markdown: redcarpet
 highlighter: pygments # or rouge or null
-exclude: ["node_modules", "gulpfile.js", "package.json"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "Gemfile", "Gemfile.lock"]

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie8" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie9" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>{{site.name}} - {{ page.title }}</title>
+      <meta name="description" content="{{ page.description }}">
+      <meta name="keywords" content="{{ page.keywords }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      {% include head.html %}
+   </head>
+   <body>
+      <!--[if lt IE 8]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+
+      <!-- includes pages content -->
+      {{ content }}
+
+      <!-- includes all the javascripts files -->
+      {% include scripts.html %}
+
+      <!-- includes inline scripts -->
+
+   </body>
+</html>

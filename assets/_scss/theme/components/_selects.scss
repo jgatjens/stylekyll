@@ -1,0 +1,35 @@
+
+// Select - _select.scss
+//
+// Please check [*bootstrap-select*](http://silviomoreto.github.io/bootstrap-select/) plugin homepage to adjust to the desired funcionality.
+//
+// Markup:
+// <select class="selectpicker">
+//   <option>Mustard</option>
+//   <option>Ketchup</option>
+//   <option>Relish</option>
+// </select>
+//
+// Styleguide 4.2
+
+// http://silviomoreto.github.io/bootstrap-select/
+// Override bootstrap-select styles
+
+.bootstrap-select {
+
+  .dropdown-menu {
+    border-color: $tertiary-color;
+  }
+
+  > .btn {
+      color: $primary-black-color;
+  }
+
+}
+
+.bootstrap-select.btn-group .btn .caret {
+  color: $secondary-accent-color;
+  border-width: $caret-width-base;
+}
+
+

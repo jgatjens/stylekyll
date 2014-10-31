@@ -103,7 +103,17 @@ html {
     margin-top:15px;
     margin-bottom:15px;
     line-height:1.1;
+    font-family:Helvetica, Arial, sans-serif;
   }
+
+
+  h1, h2, h3 {
+    &.styleguide-headings {
+      font-family:Helvetica, Arial, sans-serif !important;
+      color: black;
+    }
+  }
+
 
   h1 {
     font-size:30px;
@@ -154,13 +164,18 @@ html {
   }
 }
 
-
 #styleguide {
+
+
+  .markdown-body > p {
+    font-family:Helvetica, Arial, sans-serif !important;
+    color: black;
+  }
+
   min-width:1020px;
   color:#333;
   background-color:#fff;
   margin:0;
-  font-family:Helvetica, Arial, sans-serif;
   font-size:14px;
   line-height: 1.4;
 
@@ -170,7 +185,7 @@ html {
     margin-right: auto;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    
+
     &:before, &:after {
     content: " ";
     display: table;
@@ -227,6 +242,8 @@ html {
       a {
         color: #4183c4;
         text-decoration: none;
+        font-family:Helvetica, Arial, sans-serif !important;
+
 
         &:hover {
           color: #4183c4;
@@ -286,8 +303,10 @@ html {
       line-height: 1.7;
     }
 
-    p, blockquote, ul, ol, dl, table, pre {
+    > p, blockquote, ul, ol, dl, table, pre {
       margin: 15px 0;
+      font-family:Helvetica, Arial, sans-serif !important;
+      color: black;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -337,14 +356,19 @@ html {
       border-radius: 3px;
     }
 
-    h1 {
+    > h1 {
       font-size: 2.5em;
       border-bottom: 1px solid #ddd;
+      color: black;
+      font-family:Helvetica, Arial, sans-serif !important;
+
     }
 
-    h2 {
+    > h2 {
       font-size: 2em;
       border-bottom: 1px solid #eee;
+      font-family:Helvetica, Arial, sans-serif !important;
+      color: black;
     }
 
     h3 {
@@ -356,8 +380,6 @@ html {
     }
 
   }
-
-
 
   .styleguide-example {
     margin: 15px auto;
@@ -374,7 +396,7 @@ html {
         margin: -1px -1px 0;
         padding: 10px;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
         text-transform: uppercase;
         background: #333;
         border-top: 1px solid #000;
@@ -415,6 +437,12 @@ html {
     .styleguide-element {
       position: relative;
       padding: 20px;
+
+
+      // > h2 {
+      //   background-color: black;
+
+      // }
 
       & + .styleguide-element {
         margin-top: -5px;
@@ -483,6 +511,45 @@ html {
       }
     }
   }
+
+
+  .color-swatch {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    border-radius: 3px;
+  }
+
+  .primary-light-color {
+   background-color: #FAF5E7;
+  }
+
+  .primary-dark-color {
+    background-color: #412819;
+  }
+  .primary-black-color {
+    background-color: #1E1E1E;
+  }
+
+  .primary-accent-color {
+    background-color: #99640B;
+  }
+
+  .secondary-accent-color {
+    background-color: #C34700;
+  }
+
+  .tertiary-color {
+    background-color: #BD9F65;
+  }
+
+  .bg-default {
+
+    padding: 10px;
+  }
+
+
 }
 
-@import "github.css";
+// @import "github.css";

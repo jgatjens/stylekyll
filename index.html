@@ -1,15 +1,26 @@
 ---
-layout: default
-title: Browser support - page list
+layout: template
+title: Templates
 ---
 
-<link rel="stylesheet" type="text/css" href="/public/css/page-list.css">
+<link rel="stylesheet" type="text/css" href="{{page.relative}}assets/css/page-list.css">
 
 <div class="container">
 
-  <h1> <i class="glyphicon glyphicon-home"></i> {{ site.name }}</h1>
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a target="_blank" href="{{page.relative}}styleguide"><i class="glyphicon glyphicon-link"></i> CSS Styleguide</a></li>
+      <li class="active"><a target="_blank" href="{{page.relative}}styleguide/symbols.html"><i class="glyphicon glyphicon-link"></i> SVG Icons</a></li>
+    </ul>
+    <!-- <h2 class="text-muted">Page list</h2> -->
+  </div>
 
-  <h2>{{ site.name }} List</h2>
+  <div class="jumbotron">
+    <h1><i class="glyphicon glyphicon-hand-down"></i> {{ site.name }}</h1>
+    <p class="lead">This is just a page list where you can have control over the total list of templates you have created
+    with links to the styleguide, current status and crossbrower check !</p>
+  </div>
+
   <table class="table">
   {% for page in site.pages %}
    <!-- {% if page.browsers %} -->

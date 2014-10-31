@@ -1,0 +1,58 @@
+// Buttons - buttons.scss
+//
+// A majority of buttons in the site are built from the same twitter bootstrap class.
+//
+// Markup:
+// <a href="#" class="btn">Link</a>
+// <button class="btn {$modifiers}">Button Element</button>
+//
+// .btn-default         - Indicate that the button is the default feature of the page.
+// .btn-primary         - Indicate that the button is the primary feature of the page.
+// .btn-secondary       - Indicate that the button is the secondary feature of the page.
+//
+// Styleguide 4.1
+
+.btn {
+  font-family: '#{$primary-font-family-bold}';
+  text-transform: lowercase;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+  &:hover,
+  &:focus {
+    background-color: $btn-secondary-color;
+    color: white;
+    border-color: $btn-secondary-color;
+  }
+}
+
+.btn-primary {
+
+  // line-height: $line-height-base + 1.2;
+  font-size: 26px;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-hover-color;
+    color: white;
+    border-color: $btn-primary-hover-color;
+  }
+}
+
+.btn-default {
+
+  text-transform: capitalize;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-default-color;
+    color: white;
+    border-color: $btn-default-color;
+  }
+}
+

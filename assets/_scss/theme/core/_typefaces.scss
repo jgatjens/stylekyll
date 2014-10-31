@@ -1,0 +1,42 @@
+//= depend_on "public/fonts/ProximaNova-Regular"
+//= depend_on "public/fonts/ProximaNova-Bold"
+//= depend_on "public/fonts/IntriqueScript_PersonalUse"
+
+@font-face {
+    font-family: '#{$primary-font-family}';
+    src: url('#{$font-url}/#{$primary-font-family}.eot');
+    src: url('#{$font-url}/#{$primary-font-family}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$primary-font-family}.woff2') format('woff2'),
+         url('#{$font-url}/#{$primary-font-family}.woff') format('woff'),
+         url('#{$font-url}/#{$primary-font-family}.ttf') format('truetype'),
+         url('#{$font-url}/#{$primary-font-family}.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$primary-font-family-bold}';
+    src: url('#{$font-url}/#{$primary-font-family-bold}.eot');
+    src: url('#{$font-url}/#{$primary-font-family-bold}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$primary-font-family-bold}.woff2') format('woff2'),
+         url('#{$font-url}/#{$primary-font-family-bold}.woff') format('woff'),
+         url('#{$font-url}/#{$primary-font-family-bold}.ttf') format('truetype'),
+         url('#{$font-url}/#{$primary-font-family-bold}.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '#{$secondary-font-family}';
+    src: url('#{$font-url}/#{$secondary-font-family}.eot');
+    src: url('#{$font-url}/#{$secondary-font-family}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-url}/#{$secondary-font-family}.woff2') format('woff2'),
+         url('#{$font-url}/#{$secondary-font-family}.woff') format('woff'),
+         url('#{$font-url}/#{$secondary-font-family}.ttf') format('truetype'),
+         url('#{$font-url}/#{$secondary-font-family}.svg#intrique_script_personal_usRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

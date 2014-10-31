@@ -1,0 +1,48 @@
+// Icons
+//
+// **_icons.scss**: you can modifed svg icons form here (color and size basically).
+// You can generate the file by running the gulp task:
+//
+//     $ gulp svg
+//
+// <br>
+// After the file has been generated you have to include the content of the SVG file just after the opening **<body>** tag and to use it
+// you can paste one of the snippets anywhere into your website found in the link below. Also update the
+// <br>
+//
+// <a href="symbols.html" target="_blank">Icons Example</a>
+//
+// Styleguide 6
+
+#britt_icons_heart,
+#britt_icons_heart_full {
+  path {
+    fill: $tertiary-color;
+    stroke: darken($tertiary-color, 10%);
+  }
+}
+
+#britt_icons_cart path {
+  fill: currentColor; // color of parent element
+}
+
+#britt_icons_star_full path, #britt_icons_star_empty path, #britt_icons_star_half path {
+  fill: $tertiary-color;
+}
+
+#britt_icons_phone path {
+  fill: lighten($secondary-accent-color, 15%);
+}
+
+// shorcuts icons
+#britt_icons_specials,
+#britt_icons_gourmet_coffee,
+#britt_icons_nuts_and_sweets,
+#britt_icons_gourmet_chocolates,
+#britt_icons_gourmet_gifts,
+#britt_icons_gourmet_accessories,
+#britt_icons_refer_a_friend {
+  path {
+    fill: currentColor;
+  }
+}

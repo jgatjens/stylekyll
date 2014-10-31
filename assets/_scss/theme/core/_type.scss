@@ -1,0 +1,64 @@
+
+// Headings
+//
+// ## Headings
+//
+// All HTML headings, *h1* through *h6*, are available. **.h1** through **.h6** classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
+//
+// Markup:
+// <h1>h1. CafeBritt heading</h1> <!-- $font-size-h1:    floor(($font-size-base * 5));     ~80px -->
+// <h2>h2. CafeBritt heading</h2> <!-- $font-size-h2:    floor(($font-size-base * 2.25));  ~36px -->
+// <h3>h3. CafeBritt heading</h3> <!-- $font-size-h3:    ceil(($font-size-base * 3.75));   ~60px -->
+// <h4>h4. CafeBritt heading</h4> <!-- $font-size-h4:    ceil(($font-size-base * 1.25));   ~20px -->
+// <h5>h5. CafeBritt heading</h5> <!-- $font-size-h5:    ceil(($font-size-base * 1.125));  ~18px -->
+//
+// Styleguide 3.2
+
+h1, .h1 {
+    font-family: '#{$secondary-font-family}';
+    color: $primary-dark-color;
+    // line-height: 50px;
+    font-weight: normal;
+}
+
+h2, .h2, h4, .h4 {
+    font-family: '#{$primary-font-family-bold}';
+    color: $primary-dark-color;
+}
+
+h3, .h3 {
+    // color: #fff;
+    font-family: '#{$secondary-font-family}';
+    line-height: 60px;
+}
+
+h5 {
+  // color: #fff;
+  font-family: '#{$primary-font-family-bold}';
+  color: $secondary-accent-color;
+}
+
+// Small
+//
+// ## Small copy
+//
+// Markup:
+// <h1>h1. CafeBritt heading <small>Secondary text</small></h1> <!-- ~65% -->
+// <h2>h2. CafeBritt heading <small>Secondary text</small></h2> <!-- ~65% -->
+// <h3>h3. CafeBritt heading <small>Secondary text</small></h3> <!-- ~65% -->
+// <h4>h4. CafeBritt heading <small>Secondary text</small></h4> <!-- ~65% -->
+//
+// Styleguide 3.3
+//
+
+// Body copy
+//
+// ## Body copy
+//
+// Markup:
+// <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
+//
+// Styleguide 3.3
+
+
+
