@@ -17,14 +17,19 @@
          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-      <!-- includes topnav and navbar components -->
-      {% include components/nav.html %}
+      <div class="container">
 
-      <!-- includes pages content -->
-      {{ content }}
+        <!-- includes topnav and navbar components -->
+        {% include components/nav.html %}
 
-      <!-- includes footer component -->
-      {% include components/footer.html %}
+        <!-- includes pages content -->
+        {{ content }}
+
+        <!-- includes footer component -->
+        {% include components/footer.html %}
+
+      </div>
+
 
       <!-- includes all the javascripts files -->
       {% include scripts.html %}

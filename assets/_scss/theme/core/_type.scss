@@ -6,11 +6,11 @@
 // All HTML headings, *h1* through *h6*, are available. **.h1** through **.h6** classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.
 //
 // Markup:
-// <h1>h1. CafeBritt heading</h1> <!-- $font-size-h1:    floor(($font-size-base * 5));     ~80px -->
-// <h2>h2. CafeBritt heading</h2> <!-- $font-size-h2:    floor(($font-size-base * 2.25));  ~36px -->
-// <h3>h3. CafeBritt heading</h3> <!-- $font-size-h3:    ceil(($font-size-base * 3.75));   ~60px -->
-// <h4>h4. CafeBritt heading</h4> <!-- $font-size-h4:    ceil(($font-size-base * 1.25));   ~20px -->
-// <h5>h5. CafeBritt heading</h5> <!-- $font-size-h5:    ceil(($font-size-base * 1.125));  ~18px -->
+// <h1>h1. Company heading</h1> <!-- $font-size-h1:    floor(($font-size-base * 5));     ~80px -->
+// <h2>h2. Company heading</h2> <!-- $font-size-h2:    floor(($font-size-base * 2.25));  ~36px -->
+// <h3>h3. Company heading</h3> <!-- $font-size-h3:    ceil(($font-size-base * 3.75));   ~60px -->
+// <h4>h4. Company heading</h4> <!-- $font-size-h4:    ceil(($font-size-base * 1.25));   ~20px -->
+// <h5>h5. Company heading</h5> <!-- $font-size-h5:    ceil(($font-size-base * 1.125));  ~18px -->
 //
 // Styleguide 3.2
 
@@ -29,7 +29,6 @@ h2, .h2, h4, .h4 {
 h3, .h3 {
     // color: #fff;
     font-family: '#{$secondary-font-family}';
-    line-height: 60px;
 }
 
 h5 {
@@ -43,10 +42,10 @@ h5 {
 // ## Small copy
 //
 // Markup:
-// <h1>h1. CafeBritt heading <small>Secondary text</small></h1> <!-- ~65% -->
-// <h2>h2. CafeBritt heading <small>Secondary text</small></h2> <!-- ~65% -->
-// <h3>h3. CafeBritt heading <small>Secondary text</small></h3> <!-- ~65% -->
-// <h4>h4. CafeBritt heading <small>Secondary text</small></h4> <!-- ~65% -->
+// <h1>h1. Company heading <small>Secondary text</small></h1> <!-- ~65% -->
+// <h2>h2. Company heading <small>Secondary text</small></h2> <!-- ~65% -->
+// <h3>h3. Company heading <small>Secondary text</small></h3> <!-- ~65% -->
+// <h4>h4. Company heading <small>Secondary text</small></h4> <!-- ~65% -->
 //
 // Styleguide 3.3
 //

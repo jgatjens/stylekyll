@@ -1,0 +1,32 @@
+
+<div class="col-sm-4 col-md-4">
+  <div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div class="cover">
+              <i id="pet-remove" ng-click="remove(pet)" class="glyphicon glyphicon-remove-sign"></i>
+              <i id="pet-edit" class="glyphicon glyphicon-edit"></i>
+            </div>
+            <div class="user">
+                <img class="img-circle" alt="Pet Avatar" src="{{site.baseurl}}/assets/img/pets/01.jpg">
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name ng-binding" ng-bind="pet.name">Real Name</h3>
+                    <p class="birthday ng-binding" ng-clock="">  24 days old </p>
+                    <!-- <p class="birthday" am-time-ago="pet.birthday.iso"></p> -->
+                    <h5 ng-clock="" class="ng-binding">""</h5>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+    </div> <!-- end card -->
+  </div> <!-- end card-container -->
+</div>

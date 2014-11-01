@@ -22,11 +22,13 @@ namespace :stylekyll do
       "config" => "_config.yml"
     })).process
 
-    system "gulp sass" # compile sass
+    system "gulp styles" # compile sass
 
     system "gulp svg" # Generate svg sprite symbols
 
-    system "kss-node public/_scss _site/styleguide --sass --template _template-kss" # compile styleguide
+    system "gulp svg-kss" # Generate svg sprite symbols for styleguide
+
+    system "kss-node assets/_scss _site/styleguide --sass --template _template-kss" # compile styleguide
 
     # Get the origin to which we are going to push the site.
     origin = `git config --get remote.origin.url`
@@ -53,4 +55,10 @@ namespace :stylekyll do
 
     # Done.
   end
+
+  desc "Create styleguide localy"
+  task :kss do
+    system "kss-node assets/_scss _site/styleguide --sass --template _template-kss" # compile styleguide
+  end
+
 end

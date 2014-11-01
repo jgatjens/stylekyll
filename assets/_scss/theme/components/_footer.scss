@@ -3,44 +3,17 @@
 // **_footer.scss**: includes footer styles
 //
 // Markup:
-// <footer>
-//   <div class="container">
-//     <div class="row">
-//         <div class="col-lg-2 col-xs-3 col-md-2 col-xs-offset-2 col-md-offset-1 col-lg-offset-1">
-//           <ul class="list-unstyled">
-//             <li><h4>About us</h4></li>
-//             <li><a href="">Our Company</a></li>
-//           </ul>
-//         </div>
-//         <div class="col-lg-2 col-xs-3 col-md-2">
-//           <ul class="list-unstyled">
-//             <li><h4>Help</h4></li>
-//             <li><a href="">Contact Us</a></li>
-//             <li><a href="">Order Tracking</a></li>
-//           </ul>
-//         </div>
+// <footer class="row">
+//     <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+//       <hr>
+//       <div class="footer">
+//         <p>With ♥ from <a href="https://twitter.com/jgatjens">@gatjens</a></p>
+//       </div>
 //     </div>
-//   </div>
 // </footer>
 //
-// Styleguide 8
+// Styleguide 6
 
-footer {
-    background-color: $primary-dark-color;
-    padding-top: 35px;
-    padding-bottom: 70px;
-
-    h4 {
-      color: #fff;
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    a {
-      color: #f3e6c3;
-      font-size: 14px;
-      &:hover {
-        color: darken(#f3e6c3, 15%);
-      }
-    }
+.footer {
+  text-align: center;
 }

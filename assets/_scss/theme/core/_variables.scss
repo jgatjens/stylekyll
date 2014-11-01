@@ -26,6 +26,7 @@ $primary-light-color:             #FAF5E7;
 $primary-dark-color:              #412819;
 $primary-black-color:             #1E1E1E;
 
+
 // Secondary
 //
 // Markup:
@@ -36,7 +37,7 @@ $primary-black-color:             #1E1E1E;
 //
 // Styleguide 2.2
 
-$primary-accent-color:            #99640B;
+$primary-accent-color:            #1357A5;
 $secondary-accent-color:          #C34700;
 
 // Tertiary
@@ -63,7 +64,7 @@ $primary-font-family:       "Helvetica Neue", Helvetica;
 $primary-font-family-bold:  Arial;
 $secondary-font-family:     sans-serif;
 
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 
 //== Buttons
@@ -118,11 +119,6 @@ $font-size-base:            16px;
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:          1.63; // 20/16
 
-$font-size-h1:            floor(($font-size-base * 5));    // ~80px
-$font-size-h2:            floor(($font-size-base * 2.25)); // ~36px
-$font-size-h3:            ceil(($font-size-base * 3.75));  // ~60px
-$font-size-h4:            ceil(($font-size-base * 1.25));  // ~20px
-$font-size-h5:            ceil(($font-size-base * 1.125)); // ~18px
 
 
 //== Grid system

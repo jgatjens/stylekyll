@@ -14,3 +14,116 @@ browsers:
     - { ie9: false }
     - { ie8: false }
 ---
+
+<div ui-view="" class="fadeZoom ng-scope">  <div class="row ng-scope">
+    <div class="col-sm-offset-2 col-md-offset-3 col-sm-10 col-md-9">
+
+      <div class="col-sm-10 col-md-10" style="margin-top: 15px;">
+        <div style="width: 45px; margin-right: 10px;" class="pull-left">
+          <img src="{{site.baseurl}}/assets/img/pets/01.jpg" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="pull-left">
+          <h2 style="margin:0;">Poke Name</h2>
+          <p>Last visit: August 29, this year</p>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row ng-scope">
+    <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+      <input type="text" ng-model="search.title" class="form-control ng-pristine ng-valid" placeholder="Search Notification">
+      <hr>
+    </div>
+  </div>
+
+  <div class="row ng-scope">
+    <!-- ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-bell"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/protractor.png" alt="Take care of your Ninetales" src="{{site.baseurl}}/assets/img/protractor.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Ninetales</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the pokemon lives by sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-calendar"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/gulp.png" alt="Take care of your Charmander" src="{{site.baseurl}}/assets/img/gulp.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Charmander</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the pokemon lives by sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-calendar"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/browsersync.png" alt="Take care of your Pikachu" src="{{site.baseurl}}/assets/img/browsersync.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Pikachu</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the dog lives by catching Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-flash"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/angular.png" alt="Take care of your Jiglypo" src="{{site.baseurl}}/assets/img/angular.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Jiglypo</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the cat lives by catching Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-comment"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/jasmine.png" alt="Take care of your Piyoto" src="{{site.baseurl}}/assets/img/jasmine.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Piyoto</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the pokemon lives by sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-star"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/bootstrap.png" alt="Take care of your Bulbazor" src="{{site.baseurl}}/assets/img/bootstrap.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Bulbazor</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the pokemon lives by sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' --><div class="col-sm-offset-2 col-md-offset-0 col-lg-offset-0 col-sm-8 col-md-6 col-lg-6 ng-scope" ng-repeat="history in histories | filter:search | orderBy:'rank'">
+      <div class="thumbnail">
+        <i style="font-size: 20px; margin-bottom: 10px; color: #999" class="pull-left glyphicon glyphicon-pushpin"></i>
+        <img class="pull-right" ng-src="{{site.baseurl}}/assets/img/karma.png" alt="Take care of your Myau" src="{{site.baseurl}}/assets/img/karma.png">
+        <div class="caption">
+          <h3 class="ng-binding">Take care of your Myau</h3>
+
+          <h4><small class="ng-binding">by Dr. Topo</small><small class="ng-binding"> on Aug 26, 2014 </small></h4>
+          <p class="ng-binding">We saved the pokemon lives by sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <!-- <p><a ui-sref="history.detail({ id: history.id })">view details</a></p> -->
+        </div>
+      </div>
+    </div><!-- end ngRepeat: history in histories | filter:search | orderBy:'rank' -->
+  </div>
+</div>

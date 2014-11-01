@@ -1,0 +1,47 @@
+---
+layout: default
+name: Pokemon list
+title: Pokemon list
+description: Pokemon list description
+keywords: Pokemon list
+status: design
+browsers:
+    - { chrome: false }
+    - { firefox: false }
+    - { apple: false }
+    - { ie11: false }
+    - { ie10: false }
+    - { ie9: false }
+    - { ie8: false }
+---
+
+<div ui-view="" class="fadeZoom ng-scope">
+  <div class="row">
+
+    <div class="row ng-scope">
+      <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+        <div class="page-header">
+          <h1>
+          <a ui-sref="home" href="#!/">
+              <i class="glyphicon glyphicon-chevron-left"></i>
+            </a> Pokemon <small>List</small>
+          </h1>
+        </div>
+        <input type="text" ng-model="search.name" class="form-control ng-pristine ng-valid" placeholder="Search for Pet">
+      </div>
+    </div>
+
+    <div class="row ng-scope">
+      <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+        <hr>
+      </div>
+    </div>
+
+    {% include components/pokemon.html %}
+
+    {% include components/pokemon.html %}
+
+    {% include components/pokemon.html %}
+
+  </div>
+</div>

@@ -1,0 +1,133 @@
+---
+layout: default
+name: settings
+title: Settings
+description: settings description
+keywords: settings
+status: qa
+browsers:
+    - { chrome: true }
+    - { firefox: true }
+    - { apple: true }
+    - { ie11: true }
+    - { ie10: true }
+    - { ie9: true }
+    - { ie8: true }
+---
+<div class="row ng-scope">
+  <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+    <div class="page-header">
+      <h1>
+        <a onclick="window.history.back()" href="">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+        </a> Account Settings
+      </h1>
+    </div>
+  </div>
+</div>
+
+<form novalidate="" name="profileForm" class="form-horizontal ng-scope ng-pristine ng-valid ng-valid-required" role="form">
+
+  <div class="form-group" ng-class="{ 'has-error': submitted &amp;&amp; profileForm.name.$error.required || profileForm.name.$error.maxlength || profileForm.name.$error.minlength }">
+
+    <label for="name" class="col-sm-3 col-md-4 control-label">Name</label>
+    <div class="col-sm-7 col-md-5">
+      <input required="" type="text" name="name" ng-minlength="3" ng-maxlength="25" ng-model="user.name" class="form-control input-lg ng-pristine ng-valid-maxlength ng-valid-minlength ng-valid ng-valid-required" id="name" placeholder="Name">
+    </div>
+  </div>
+
+  <!-- Save Name -->
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button ng-disabled="!profileForm.name.$valid" ng-click="saveName()" class="btn btn-primary btn-lg btn-block">Save name</button>
+    </div>
+  </div>
+</form>
+
+<form novalidate="" name="passwordForm" class="form-horizontal ng-scope ng-pristine ng-invalid ng-invalid-required" role="form">
+
+  <!-- <div class="form-group" ng-class="{ 'has-error': submittedPassword && passwordForm.password.$error.required || passwordForm.password.$error.minlength }"> -->
+  <div class="form-group" ng-class="{ 'has-error': submittedPassword &amp;&amp; passwordForm.password.$error.required || passwordForm.password.$error.minlength }">
+    <label for="password" class="col-sm-3 col-md-4 control-label">Password</label>
+    <div class="col-sm-7 col-md-5">
+      <input ng-minlength="5" required="" type="password" name="password" ng-model="userInfo.password" class="form-control input-lg ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group" ng-class="{ 'has-error': submittedPassword &amp;&amp; passwordForm.confirmPassword.$error.required }">
+    <label for="confirmPasword" class="col-sm-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <!-- ngIf: passwordForm.password.$valid && userInfo.password == userInfo.confirmPassword -->
+      <input ng-disabled="!passwordForm.password.$valid" required="" type="password" name="confirmPassword" data-match="userInfo.password" ng-model="userInfo.confirmPassword" class="form-control input-lg ng-pristine ng-invalid ng-invalid-required" placeholder="Confirm Password" disabled="disabled">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button ng-click="savePassword()" ng-disabled="!passwordForm.password.$valid" class="btn btn-primary  btn-lg btn-block" disabled="disabled">Save Password</button>
+    </div>
+  </div>
+</form>
+
+<form novalidate="" name="aditionalForm" class="form-horizontal ng-scope ng-pristine ng-valid" role="form">
+  <div class="form-group">
+    <label for="email" class="col-sm-3 col-md-4 control-label">Email</label>
+    <div class="col-sm-7 col-md-5">
+      <input disabled="" type="email" class="form-control input-lg ng-pristine ng-valid ng-valid-email" ng-model="user.email" id="email" placeholder="Email">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="username" class="col-sm-3 col-md-4 control-label">Username</label>
+    <div class="col-sm-7 col-md-5">
+      <input disabled="" type="text" class="form-control input-lg ng-pristine ng-valid" id="username" ng-model="user.username" placeholder="Username">
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label for="inputEmail3" class="col-sm-3 col-md-4 control-label">Aditional Info</label>
+    <div class="col-sm-7 col-md-5">
+      <input type="phone" class="form-control input-lg" id="phone" placeholder="Date of birth">
+    </div>
+  </div> -->
+
+  <div class="form-group">
+    <label for="temp" class="col-xs-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <div class="form-group form-inline">
+        <div class="radio">
+          <label>
+            <input type="radio" name="male" ng-model="user.gender" value="male" class="ng-pristine ng-valid">
+            Male
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="female" ng-model="user.gender" value="female" class="ng-pristine ng-valid">
+            Female
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-xs-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <div class="checkbox">
+        <label>
+          <input ng-model="user.allowEmails" type="checkbox" class="ng-pristine ng-valid"> Allows us to send you emails
+        </label>
+      </div>
+      <!-- <div class="checkbox">
+        <label>
+          <input ng-model="" type="checkbox"> Show phone numbers to doctors
+        </label>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button type="submit" ng-disabled="!aditionalForm.$dirty" ng-click="saveAditionalInfo()" class="btn btn-primary  btn-lg btn-block" disabled="disabled">Save Aditional Info</button>
+    </div>
+  </div>
+</form>

@@ -1,81 +1,74 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
-var sass        = require('gulp-ruby-sass');
-var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var svgSprite   = require("gulp-svg-sprites");
+var $           = require('gulp-load-plugins')();
 
-// var shell       = require('gulp-shell');
-// var clean       = require('gulp-clean');
-// var deploy      = require("gulp-gh-pages");
-
-
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+var config = {
+  dest: '_site',
+  assetsFolder: 'assets',
+  messages: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function (done) {
-  browserSync.notify(messages.jekyllBuild);
+gulp.task('jekyll-build', function (cb) {
+  browserSync.notify(config.messages);
   return cp.spawn('jekyll', ['build','--config','_config.dev.yml'], {stdio: 'inherit'})
-    .on('close', done);
+    .on('close', cb);
 });
 
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build', 'sass'], function () {
+gulp.task('jekyll-rebuild', ['styles', 'jekyll-build'], function (cb) {
   browserSync.reload();
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
- */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+*/
+gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
   browserSync({
     server: {
-      baseDir: '_site'
+      baseDir: config.dest
     }
   });
 });
 
 
 // SVG Icons
-gulp.task('svg', ['styleguide-svg'], function () {
-    return gulp.src('assets/_svg/*.svg')
-      .pipe(svgSprite({
+gulp.task('svg', function () {
+    return gulp.src(config.assetsFolder + '/_svg/*.svg')
+      .pipe($.svgSprites({
           preview: false, // no preview
-          mode: "symbols"    // output SVG data
+          mode: 'symbols'    // output SVG data
       }))
-      .pipe(gulp.dest("assets/"));
+      .pipe(gulp.dest(config.assetsFolder));
 });
 
 // SVG Icons With Preview  - styleguide
-gulp.task('styleguide-svg', function () {
-    return gulp.src('assets/_svg/*.svg')
-      .pipe(svgSprite({
-          mode: "symbols"
+gulp.task('svg-kss', function () {
+    return gulp.src(config.assetsFolder + '/_svg/*.svg')
+      .pipe($.svgSprites({
+          mode: 'symbols'
       }))
-      .pipe(gulp.dest("_site/styleguide"));
+      .pipe(gulp.dest(config.dest + '/styleguide'));
 });
-
-// gulp.task('styleguide', shell.task([
-//   'kss-node assets/_scss _site/styleguide --sass --template _template-kss'
-// ]));
 
 
 /**
  * inject bower components
  */
+var wiredep = require('wiredep').stream;
 gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
 
   // includes dependencies in jekyll include folder
-  gulp.src('_site/**/*.html')
+  // copy manualy and replace it with {{page.relative}}
+  // until we find the way to make it
+  gulp.src('_includes/*.html')
     .pipe(wiredep())
-    .pipe(gulp.dest('_site'));
+    .pipe(gulp.dest('_includes'));
 
   // template-kss
   // Also includes the same dependencies in the styleguide main file.
@@ -88,26 +81,22 @@ gulp.task('wiredep', function () {
 /**
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
-gulp.task('sass', function () {
-  return gulp.src('assets/_scss/*.scss')
-    .pipe(sass({
-        sourcemapPath: '_site/assets/css',
+gulp.task('styles', function () {
+  return gulp.src(config.assetsFolder + '/_scss/*.scss')
+    .pipe($.rubySass({
         require: ['bootstrap-sass']
      }))
-    .on('error', browserSync.notify)
-    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(gulp.dest('_site/assets/css'))
+    .pipe($.autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(gulp.dest(config.dest + '/'+ config.assetsFolder + '/css'))
     .pipe(browserSync.reload({stream:true}));
-    // .pipe(gulp.dest('_site/assets/css'));
 });
 
 /**
  * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/_scss/**/*.scss', ['sass']);
-    gulp.watch(['index.html', 'assets/js/**/*', 'pages/**/*.html', '_layouts/*.html', '_includes/**/*.html'], ['jekyll-rebuild', 'svg']);
+    gulp.watch(config.assetsFolder + '/_scss/**/*.scss', ['styles']);
+    gulp.watch(['index.html', config.assetsFolder + '/js/**/*', 'pages/**/*.html', '_layouts/*.html', '_includes/**/*.html'], ['jekyll-rebuild']);
 });
 
 /**
@@ -115,7 +104,7 @@ gulp.task('watch', function () {
  * running just `gulp` will
  * wireup bower dependecies,
  * compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('serve', ['wiredep', 'browser-sync', 'watch']);
+
+gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('default', ['serve']);

@@ -6,7 +6,7 @@
 // ## How to override bootstrap variables ?
 //
 // Find the variable in bootstrap's [*_variables*](https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss)
-// and then copy the variable you want to override and remove the **!default;** text and of course update it with the new value. Please try to keep the same comments and headers.
+// and then copy the variable you want to override and remove the **!default;** text and of course update it with the new value.
 //
 // Styleguide 1.2
 
@@ -50,13 +50,13 @@
 // **_forms.scss** overrides boostrap forms styles.
 //
 // Styleguide 5
-// @import "core/forms";
+@import "core/forms";
 // @import "core/icons";
 
 // custom components
 @import "components/nav";
 @import "components/footer";
-// @import "components/dropdowns";
+@import "components/pokemon";
 // @import "components/selects";
 // @import "components/stay-touch";
 // @import "components/popular-regions";

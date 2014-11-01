@@ -51,4 +51,4 @@ KSS’s documentation syntax is human readable, but just structured enough to be
 
 Compiling the styleguide
     
-    $ kss-node public/_scss _site/styleguide --sass --template _template-kss
+    $ kss-node public/_scss _site/styleguide --sass --template _template-kss 
