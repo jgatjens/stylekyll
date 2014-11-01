@@ -1,0 +1,17 @@
+{
+  "name": "cafebritt",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass-official": "3.2.0",
+    "sweetalert": "~0.3.1"
+  },
+  "overrides": {
+    "bootstrap-sass-official": {
+      "main": [
+        "assets/javascripts/bootstrap/transition.js",
+        "assets/javascripts/bootstrap/dropdown.js",
+        "assets/javascripts/bootstrap/modal.js"
+      ]
+    }
+  }
+}

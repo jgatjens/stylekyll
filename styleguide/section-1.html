@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide CafeBritt</title>
+  <link rel="stylesheet" href="public/github.css" type="text/css" />
+  <link rel="stylesheet" href="public/kss.css" type="text/css" />
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/sweetalert/lib/sweet-alert.css" />
+  <link rel="stylesheet" href="../bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+  <!-- endbower -->
+
+  <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+<body id="styleguide">
+  <header class="styleguide-header styleguide-reset">
+    <div class="styleguide-container">
+      <h1 class="styleguide-headings">Styleguide</h1>
+    </div>
+  </header>
+  <div class="styleguide-container">
+    <nav class="styleguide-menu styleguide-reset">
+       <ul class="styleguide-menu-list" data-kss-ref="1">
+        <li><a href="./index.html">0. Overview</a></li>
+        <li><a href="section-1.html">1. Theme</a></li>
+        <li><a href="section-2.html">2. Colors</a></li>
+        <li><a href="section-3.html">3. Typefaces</a></li>
+        <li><a href="section-4.html">4. UI Elements</a></li>
+        <li><a href="section-5.html">5. Forms</a></li>
+        <li><a href="section-6.html">6. Footer</a></li>
+        <li><a href="section-7.html">7. Pokemon</a></li>
+      </ul>
+    </nav>
+
+    <div class="styleguide-content">
+
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Theme</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_theme.scss</strong>: reusable components and base styles that can be used across the site. You can find the import of the custom variables and bootsrap components.</p>
+
+      </div>
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Variables</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_variables.scss</strong>: in this file you can find all the variables used for building the theme. Also is the place where you can override
+bootstrap variables such as the grid and most of the components (modals, dropdowns) etc..</p>
+<h2 id="how-to-override-bootstrap-variables-">How to override bootstrap variables ?</h2>
+<p>Find the variable in bootstrap&#39;s <a href="https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss"><em>_variables</em></a>
+and then copy the variable you want to override and remove the <strong>!default;</strong> text and of course update it with the new value.</p>
+
+      </div>
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Twitter Bootstrap</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_bootstrap.scss</strong>: we included all the components and helpers we need from twitter bootstrap.</p>
+<p><strong>note</strong>:
+<em>we load bootstrap as ruby gem</em></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="styleguide-footer styleguide-reset styleguide-container">
+    <p>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a>.</p>
+    <p>Designed by <a href="https://github.com/">GitHub</a> , <a href="http://warpspire.com/">Kyle Neath</a></p>
+  </div>
+
+
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="../bower_components/sweetalert/lib/sweet-alert.js"></script>
+  <script src="../bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <!-- endbower -->
+
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+
+  <script src="public/kss.js"></script>
+  <script src="public/highlight.pack.js"></script>
+  <!-- // <script src="public/jquery-1.10.2.min.js"></script> -->
+  <script src="public/styleguide.js"></script>
+
+</body>
+</html>
+

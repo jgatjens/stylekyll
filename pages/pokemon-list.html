@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie8" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie9" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>stylekyll - Pokemon list</title>
+      <meta name="description" content="Pokemon list description">
+      <meta name="keywords" content="Pokemon list">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylekyll" href="assets/favicon.ico">
+
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="/stylekyll/bower_components/sweetalert/lib/sweet-alert.css" />
+
+    <link rel="stylesheet" href="/stylekyll/assets/css/style.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+   </head>
+   <body>
+      <!--[if lt IE 8]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div class="container">
+
+        <!-- includes topnav and navbar components -->
+        <div class="header" ng-vet-header="">
+  <h3 class="company pull-left"><img src="/stylekyll/assets/img/logo.png" alt="logo"></h3>
+  <ul id="main-nav" class="nav nav-pills pull-right" ng-show="user.isAuthenticated" ng-vet-nav="">
+  <li ui-sref-active="active" class=""><a ui-sref="home" href="#!/"><i class="glyphicon glyphicon-home"></i></a></li>
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pokemons <span class="caret"></span></a>
+    <ul class="dropdown-menu" role="menu">
+      <li ui-sref-active="active" class=""><a ui-sref="pets.new" href="#!/pokemon/new">New Pokemon</a></li>
+      <li class="divider"></li>
+      <li ui-sref-active="active" class="active"><a ui-sref="pets.list" href="#!/pokemon/list">List</a></li>
+      <li ui-sref-active="active" class=""><a ui-sref="pets.record" href="#!/pokemon/record">New record</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-bell"></i> <span class="badge">2</span> <span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right" style="max-width: 350px; min-width: 300px; right: -110%;" role="menu">
+      <li style="text-align:center">Notifications</li>
+      <li class="divider"></li>
+      <li>
+        <a ui-sref="notification" href="#!/notification">
+          <h6>C. Pokemon Heredia, 01-08-2014</h6>
+          <h4>Acceso info Pokemon</h4>
+          <p style="white-space: normal;">Lorem ipsum dolor sit amet, consectetur  adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        </a>
+      </li>
+
+      <li>
+        <a ui-sref="notification" href="#!/notification">
+          <h6>C. Pokemon, 01-09-2014</h6>
+          <h4>Centro Pokemon</h4>
+          <p style="white-space: normal;">Lorem ipsum dolor sit amet, consectetur  adipisicing tempor incididunt.</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">jgatjens <span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <li ui-sref-active="active" class=""><a ui-sref="profile" href="#!/profile">Account settings</a></li>
+      <li class="divider"></li>
+      <li ui-sref-active="active" class=""><a ui-sref="notification" href="#!/notification">Notification Center</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li class="divider"></li>
+      <li><a ui-sref="login" ng-click="logout()" href="#!/login">Logout</a></li>
+    </ul>
+  </li>
+  <li>
+    <!-- <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div> -->
+  </li>
+</ul>
+  <div class="clearfix"></div>
+</div>
+
+
+        <!-- includes pages content -->
+        <div ui-view="" class="fadeZoom ng-scope">
+  <div class="row">
+
+    <div class="row ng-scope">
+      <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+        <div class="page-header">
+          <h1>
+          <a ui-sref="home" href="#!/">
+              <i class="glyphicon glyphicon-chevron-left"></i>
+            </a> Pokemon <small>List</small>
+          </h1>
+        </div>
+        <input type="text" ng-model="search.name" class="form-control ng-pristine ng-valid" placeholder="Search for Pet">
+      </div>
+    </div>
+
+    <div class="row ng-scope">
+      <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+        <hr>
+      </div>
+    </div>
+
+    
+<div class="col-sm-4 col-md-4">
+  <div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div class="cover">
+              <i id="pet-remove" ng-click="remove(pet)" class="glyphicon glyphicon-remove-sign"></i>
+              <i id="pet-edit" class="glyphicon glyphicon-edit"></i>
+            </div>
+            <div class="user">
+                <img class="img-circle" alt="Pet Avatar" src="/stylekyll/assets/img/pets/01.jpg">
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name ng-binding" ng-bind="pet.name">Real Name</h3>
+                    <p class="birthday ng-binding" ng-clock="">  24 days old </p>
+                    <!-- <p class="birthday" am-time-ago="pet.birthday.iso"></p> -->
+                    <h5 ng-clock="" class="ng-binding">""</h5>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+    </div> <!-- end card -->
+  </div> <!-- end card-container -->
+</div>
+
+
+    
+<div class="col-sm-4 col-md-4">
+  <div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div class="cover">
+              <i id="pet-remove" ng-click="remove(pet)" class="glyphicon glyphicon-remove-sign"></i>
+              <i id="pet-edit" class="glyphicon glyphicon-edit"></i>
+            </div>
+            <div class="user">
+                <img class="img-circle" alt="Pet Avatar" src="/stylekyll/assets/img/pets/01.jpg">
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name ng-binding" ng-bind="pet.name">Real Name</h3>
+                    <p class="birthday ng-binding" ng-clock="">  24 days old </p>
+                    <!-- <p class="birthday" am-time-ago="pet.birthday.iso"></p> -->
+                    <h5 ng-clock="" class="ng-binding">""</h5>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+    </div> <!-- end card -->
+  </div> <!-- end card-container -->
+</div>
+
+
+    
+<div class="col-sm-4 col-md-4">
+  <div class="card-container">
+    <div class="card">
+        <div class="front">
+            <div class="cover">
+              <i id="pet-remove" ng-click="remove(pet)" class="glyphicon glyphicon-remove-sign"></i>
+              <i id="pet-edit" class="glyphicon glyphicon-edit"></i>
+            </div>
+            <div class="user">
+                <img class="img-circle" alt="Pet Avatar" src="/stylekyll/assets/img/pets/01.jpg">
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name ng-binding" ng-bind="pet.name">Real Name</h3>
+                    <p class="birthday ng-binding" ng-clock="">  24 days old </p>
+                    <!-- <p class="birthday" am-time-ago="pet.birthday.iso"></p> -->
+                    <h5 ng-clock="" class="ng-binding">""</h5>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end front panel -->
+    </div> <!-- end card -->
+  </div> <!-- end card-container -->
+</div>
+
+
+  </div>
+</div>
+
+
+        <!-- includes footer component -->
+        <footer class="row">
+    <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+      <hr>
+      <div class="footer">
+        <p>With ♥ from <a href="https://twitter.com/jgatjens">@gatjens</a></p>
+      </div>
+    </div>
+</footer>
+
+
+      </div>
+
+
+      <!-- includes all the javascripts files -->
+            <!-- Vendors -->
+
+      <!-- bower:js -->
+      <script src="/stylekyll/bower_components/jquery/dist/jquery.js"></script>
+      <script src="/stylekyll/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+      <script src="/stylekyll/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+      <script src="/stylekyll/bower_components/sweetalert/lib/sweet-alert.js"></script>
+      <!-- endbower -->
+
+      <!-- Custom JS -->
+      <script src="/stylekyll/assets/js/app.js"></script>
+
+
+
+
+
+
+      <!-- includes inline scripts -->
+
+   </body>
+</html>

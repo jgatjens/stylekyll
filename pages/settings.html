@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie8" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie9" id="ngCmApp" data-ng-app="ngCmApp"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>stylekyll - Settings</title>
+      <meta name="description" content="settings description">
+      <meta name="keywords" content="settings">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylekyll" href="assets/favicon.ico">
+
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="/stylekyll/bower_components/sweetalert/lib/sweet-alert.css" />
+
+    <link rel="stylesheet" href="/stylekyll/assets/css/style.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
+   </head>
+   <body>
+      <!--[if lt IE 8]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div class="container">
+
+        <!-- includes topnav and navbar components -->
+        <div class="header" ng-vet-header="">
+  <h3 class="company pull-left"><img src="/stylekyll/assets/img/logo.png" alt="logo"></h3>
+  <ul id="main-nav" class="nav nav-pills pull-right" ng-show="user.isAuthenticated" ng-vet-nav="">
+  <li ui-sref-active="active" class=""><a ui-sref="home" href="#!/"><i class="glyphicon glyphicon-home"></i></a></li>
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pokemons <span class="caret"></span></a>
+    <ul class="dropdown-menu" role="menu">
+      <li ui-sref-active="active" class=""><a ui-sref="pets.new" href="#!/pokemon/new">New Pokemon</a></li>
+      <li class="divider"></li>
+      <li ui-sref-active="active" class="active"><a ui-sref="pets.list" href="#!/pokemon/list">List</a></li>
+      <li ui-sref-active="active" class=""><a ui-sref="pets.record" href="#!/pokemon/record">New record</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-bell"></i> <span class="badge">2</span> <span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right" style="max-width: 350px; min-width: 300px; right: -110%;" role="menu">
+      <li style="text-align:center">Notifications</li>
+      <li class="divider"></li>
+      <li>
+        <a ui-sref="notification" href="#!/notification">
+          <h6>C. Pokemon Heredia, 01-08-2014</h6>
+          <h4>Acceso info Pokemon</h4>
+          <p style="white-space: normal;">Lorem ipsum dolor sit amet, consectetur  adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        </a>
+      </li>
+
+      <li>
+        <a ui-sref="notification" href="#!/notification">
+          <h6>C. Pokemon, 01-09-2014</h6>
+          <h4>Centro Pokemon</h4>
+          <p style="white-space: normal;">Lorem ipsum dolor sit amet, consectetur  adipisicing tempor incididunt.</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">jgatjens <span class="caret"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+      <li ui-sref-active="active" class=""><a ui-sref="profile" href="#!/profile">Account settings</a></li>
+      <li class="divider"></li>
+      <li ui-sref-active="active" class=""><a ui-sref="notification" href="#!/notification">Notification Center</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li class="divider"></li>
+      <li><a ui-sref="login" ng-click="logout()" href="#!/login">Logout</a></li>
+    </ul>
+  </li>
+  <li>
+    <!-- <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div> -->
+  </li>
+</ul>
+  <div class="clearfix"></div>
+</div>
+
+
+        <!-- includes pages content -->
+        <div class="row ng-scope">
+  <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+    <div class="page-header">
+      <h1>
+        <a onclick="window.history.back()" href="">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+        </a> Account Settings
+      </h1>
+    </div>
+  </div>
+</div>
+
+<form novalidate="" name="profileForm" class="form-horizontal ng-scope ng-pristine ng-valid ng-valid-required" role="form">
+
+  <div class="form-group" ng-class="{ 'has-error': submitted &amp;&amp; profileForm.name.$error.required || profileForm.name.$error.maxlength || profileForm.name.$error.minlength }">
+
+    <label for="name" class="col-sm-3 col-md-4 control-label">Name</label>
+    <div class="col-sm-7 col-md-5">
+      <input required="" type="text" name="name" ng-minlength="3" ng-maxlength="25" ng-model="user.name" class="form-control input-lg ng-pristine ng-valid-maxlength ng-valid-minlength ng-valid ng-valid-required" id="name" placeholder="Name">
+    </div>
+  </div>
+
+  <!-- Save Name -->
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button ng-disabled="!profileForm.name.$valid" ng-click="saveName()" class="btn btn-primary btn-lg btn-block">Save name</button>
+    </div>
+  </div>
+</form>
+
+<form novalidate="" name="passwordForm" class="form-horizontal ng-scope ng-pristine ng-invalid ng-invalid-required" role="form">
+
+  <!-- <div class="form-group" ng-class="{ 'has-error': submittedPassword && passwordForm.password.$error.required || passwordForm.password.$error.minlength }"> -->
+  <div class="form-group" ng-class="{ 'has-error': submittedPassword &amp;&amp; passwordForm.password.$error.required || passwordForm.password.$error.minlength }">
+    <label for="password" class="col-sm-3 col-md-4 control-label">Password</label>
+    <div class="col-sm-7 col-md-5">
+      <input ng-minlength="5" required="" type="password" name="password" ng-model="userInfo.password" class="form-control input-lg ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group" ng-class="{ 'has-error': submittedPassword &amp;&amp; passwordForm.confirmPassword.$error.required }">
+    <label for="confirmPasword" class="col-sm-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <!-- ngIf: passwordForm.password.$valid && userInfo.password == userInfo.confirmPassword -->
+      <input ng-disabled="!passwordForm.password.$valid" required="" type="password" name="confirmPassword" data-match="userInfo.password" ng-model="userInfo.confirmPassword" class="form-control input-lg ng-pristine ng-invalid ng-invalid-required" placeholder="Confirm Password" disabled="disabled">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button ng-click="savePassword()" ng-disabled="!passwordForm.password.$valid" class="btn btn-primary  btn-lg btn-block" disabled="disabled">Save Password</button>
+    </div>
+  </div>
+</form>
+
+<form novalidate="" name="aditionalForm" class="form-horizontal ng-scope ng-pristine ng-valid" role="form">
+  <div class="form-group">
+    <label for="email" class="col-sm-3 col-md-4 control-label">Email</label>
+    <div class="col-sm-7 col-md-5">
+      <input disabled="" type="email" class="form-control input-lg ng-pristine ng-valid ng-valid-email" ng-model="user.email" id="email" placeholder="Email">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="username" class="col-sm-3 col-md-4 control-label">Username</label>
+    <div class="col-sm-7 col-md-5">
+      <input disabled="" type="text" class="form-control input-lg ng-pristine ng-valid" id="username" ng-model="user.username" placeholder="Username">
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label for="inputEmail3" class="col-sm-3 col-md-4 control-label">Aditional Info</label>
+    <div class="col-sm-7 col-md-5">
+      <input type="phone" class="form-control input-lg" id="phone" placeholder="Date of birth">
+    </div>
+  </div> -->
+
+  <div class="form-group">
+    <label for="temp" class="col-xs-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <div class="form-group form-inline">
+        <div class="radio">
+          <label>
+            <input type="radio" name="male" ng-model="user.gender" value="male" class="ng-pristine ng-valid">
+            Male
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="female" ng-model="user.gender" value="female" class="ng-pristine ng-valid">
+            Female
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-xs-3 col-md-4 control-label"></label>
+    <div class="col-sm-7 col-md-5">
+      <div class="checkbox">
+        <label>
+          <input ng-model="user.allowEmails" type="checkbox" class="ng-pristine ng-valid"> Allows us to send you emails
+        </label>
+      </div>
+      <!-- <div class="checkbox">
+        <label>
+          <input ng-model="" type="checkbox"> Show phone numbers to doctors
+        </label>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-md-offset-4 col-sm-7 col-md-5">
+      <button type="submit" ng-disabled="!aditionalForm.$dirty" ng-click="saveAditionalInfo()" class="btn btn-primary  btn-lg btn-block" disabled="disabled">Save Aditional Info</button>
+    </div>
+  </div>
+</form>
+
+
+        <!-- includes footer component -->
+        <footer class="row">
+    <div class="col-sm-offset-2 col-md-offset-3 col-sm-8 col-md-6">
+      <hr>
+      <div class="footer">
+        <p>With ♥ from <a href="https://twitter.com/jgatjens">@gatjens</a></p>
+      </div>
+    </div>
+</footer>
+
+
+      </div>
+
+
+      <!-- includes all the javascripts files -->
+            <!-- Vendors -->
+
+      <!-- bower:js -->
+      <script src="/stylekyll/bower_components/jquery/dist/jquery.js"></script>
+      <script src="/stylekyll/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+      <script src="/stylekyll/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+      <script src="/stylekyll/bower_components/sweetalert/lib/sweet-alert.js"></script>
+      <!-- endbower -->
+
+      <!-- Custom JS -->
+      <script src="/stylekyll/assets/js/app.js"></script>
+
+
+
+
+
+
+      <!-- includes inline scripts -->
+
+   </body>
+</html>

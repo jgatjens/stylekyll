@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide CafeBritt</title>
+  <link rel="stylesheet" href="public/github.css" type="text/css" />
+  <link rel="stylesheet" href="public/kss.css" type="text/css" />
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/sweetalert/lib/sweet-alert.css" />
+  <link rel="stylesheet" href="../bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+  <!-- endbower -->
+
+  <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+<body id="styleguide">
+  <header class="styleguide-header styleguide-reset">
+    <div class="styleguide-container">
+      <h1 class="styleguide-headings">Styleguide</h1>
+    </div>
+  </header>
+  <div class="styleguide-container">
+    <nav class="styleguide-menu styleguide-reset">
+       <ul class="styleguide-menu-list" data-kss-ref="5">
+        <li><a href="./index.html">0. Overview</a></li>
+        <li><a href="section-1.html">1. Theme</a></li>
+        <li><a href="section-2.html">2. Colors</a></li>
+        <li><a href="section-3.html">3. Typefaces</a></li>
+        <li><a href="section-4.html">4. UI Elements</a></li>
+        <li><a href="section-5.html">5. Forms</a></li>
+        <li><a href="section-6.html">6. Footer</a></li>
+        <li><a href="section-7.html">7. Pokemon</a></li>
+      </ul>
+    </nav>
+
+    <div class="styleguide-content">
+
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Forms</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_forms.scss</strong> overrides boostrap forms styles.</p>
+
+      </div>
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3 class="styleguide-headings">5.1 <em>Basic Example</em></h3>
+        </header>
+
+        <div class="styleguide-element">
+          <form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Default Field</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your text here">
+  </div>
+  <div class="form-group has-error">
+    <label for="exampleInputPassword1">Error Field</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your text here">
+    <p><label class="text-danger">Some error message</label></p>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block">Add to cart</button>
+</form>
+        </div>
+
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;form role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;exampleInputEmail1&quot;&gt;Default Field&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Enter your text here&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group has-error&quot;&gt;
+    &lt;label for=&quot;exampleInputPassword1&quot;&gt;Error Field&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Enter your text here&quot;&gt;
+    &lt;p&gt;&lt;label class=&quot;text-danger&quot;&gt;Some error message&lt;/label&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-block&quot;&gt;Add to cart&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3 class="styleguide-headings">5.2 <em>Custom checkboxes</em></h3>
+        </header>
+
+        <div class="styleguide-element">
+            <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox">
+       <div class="custom-checkbox-square">
+         <input type="checkbox" value="None" id="custom-checkbox-1" name="check" />
+         <label for="custom-checkbox-1"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content</label>
+    </div>
+  </div>
+  <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox">
+       <div class="custom-checkbox-square">
+         <input type="checkbox" checked value="None" id="custom-checkbox-2" name="check" />
+         <label for="custom-checkbox-2"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content active</label>
+    </div>
+  </div>
+  <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox disabled">
+       <div class="custom-checkbox-square">
+         <input type="checkbox" disabled value="None" id="custom-checkbox-3" name="check" />
+         <label for="custom-checkbox-3"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content disabled</label>
+    </div>
+  </div>
+  <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox checkbox-lg">  <!-- .checkbox-lg -->
+       <div class="custom-checkbox-square">
+         <input type="checkbox" value="None" id="custom-checkbox-4" name="check" />
+         <label for="custom-checkbox-4"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content</label>
+    </div>
+  </div>
+  <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox checkbox-lg">   <!-- .checkbox-lg -->
+       <div class="custom-checkbox-square">
+         <input type="checkbox" checked value="None" id="custom-checkbox-5" name="check" />
+         <label for="custom-checkbox-5"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content active</label>
+    </div>
+  </div>
+  <div class="form-group bg-default">
+    <!-- Custom Checkbox -->
+    <div class="custom-checkbox checkbox-lg disabled"> <!-- .checkbox-lg -->
+       <div class="custom-checkbox-square">
+         <input type="checkbox" disabled value="None" id="custom-checkbox-6" name="check" />
+         <label for="custom-checkbox-6"></label>
+       </div>
+       <label class="checkbox-label" for="text">Some content disabled</label>
+    </div>
+  </div>
+        </div>
+
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox&quot;&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; value=&quot;None&quot; id=&quot;custom-checkbox-1&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-1&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox&quot;&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; checked value=&quot;None&quot; id=&quot;custom-checkbox-2&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-2&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content active&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox disabled&quot;&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; disabled value=&quot;None&quot; id=&quot;custom-checkbox-3&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-3&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content disabled&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox checkbox-lg&quot;&gt;  &lt;!-- .checkbox-lg --&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; value=&quot;None&quot; id=&quot;custom-checkbox-4&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-4&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox checkbox-lg&quot;&gt;   &lt;!-- .checkbox-lg --&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; checked value=&quot;None&quot; id=&quot;custom-checkbox-5&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-5&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content active&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group bg-default&quot;&gt;
+    &lt;!-- Custom Checkbox --&gt;
+    &lt;div class=&quot;custom-checkbox checkbox-lg disabled&quot;&gt; &lt;!-- .checkbox-lg --&gt;
+       &lt;div class=&quot;custom-checkbox-square&quot;&gt;
+         &lt;input type=&quot;checkbox&quot; disabled value=&quot;None&quot; id=&quot;custom-checkbox-6&quot; name=&quot;check&quot; /&gt;
+         &lt;label for=&quot;custom-checkbox-6&quot;&gt;&lt;/label&gt;
+       &lt;/div&gt;
+       &lt;label class=&quot;checkbox-label&quot; for=&quot;text&quot;&gt;Some content disabled&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="styleguide-footer styleguide-reset styleguide-container">
+    <p>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a>.</p>
+    <p>Designed by <a href="https://github.com/">GitHub</a> , <a href="http://warpspire.com/">Kyle Neath</a></p>
+  </div>
+
+
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="../bower_components/sweetalert/lib/sweet-alert.js"></script>
+  <script src="../bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <!-- endbower -->
+
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+
+  <script src="public/kss.js"></script>
+  <script src="public/highlight.pack.js"></script>
+  <!-- // <script src="public/jquery-1.10.2.min.js"></script> -->
+  <script src="public/styleguide.js"></script>
+
+</body>
+</html>
+

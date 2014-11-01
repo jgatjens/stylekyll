@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Styleguide CafeBritt</title>
+  <link rel="stylesheet" href="public/github.css" type="text/css" />
+  <link rel="stylesheet" href="public/kss.css" type="text/css" />
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/sweetalert/lib/sweet-alert.css" />
+  <link rel="stylesheet" href="../bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+  <!-- endbower -->
+
+  <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+<body id="styleguide">
+  <header class="styleguide-header styleguide-reset">
+    <div class="styleguide-container">
+      <h1 class="styleguide-headings">Styleguide</h1>
+    </div>
+  </header>
+  <div class="styleguide-container">
+    <nav class="styleguide-menu styleguide-reset">
+       <ul class="styleguide-menu-list" data-kss-ref="3">
+        <li><a href="./index.html">0. Overview</a></li>
+        <li><a href="section-1.html">1. Theme</a></li>
+        <li><a href="section-2.html">2. Colors</a></li>
+        <li><a href="section-3.html">3. Typefaces</a></li>
+        <li><a href="section-4.html">4. UI Elements</a></li>
+        <li><a href="section-5.html">5. Forms</a></li>
+        <li><a href="section-6.html">6. Footer</a></li>
+        <li><a href="section-7.html">7. Pokemon</a></li>
+      </ul>
+    </nav>
+
+    <div class="styleguide-content">
+
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Typefaces</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_typefaces.scss</strong>: loads theme fonts.</p>
+
+      </div>
+      <header class="example-header styleguide-reset">
+        <h1 class="styleguide-headings">Typography</h1>
+      </header>
+      <div class="markdown-body styleguide-reset">
+        <p><strong>_type.scss</strong>: overrides bootstrap typography values.</p>
+
+      </div>
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3 class="styleguide-headings">3.2 <em>Headings</em></h3>
+        </header>
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          <h2 id="headings">Headings</h2>
+<p>All HTML headings, <em>h1</em> through <em>h6</em>, are available. <strong>.h1</strong> through <strong>.h6</strong> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+
+
+          <ul class="styleguide-modifier">
+          </ul>
+        </div>
+
+        <div class="styleguide-element">
+          <h1>h1. Company heading</h1> <!-- $font-size-h1:    floor(($font-size-base * 5));     ~80px -->
+<h2>h2. Company heading</h2> <!-- $font-size-h2:    floor(($font-size-base * 2.25));  ~36px -->
+<h3>h3. Company heading</h3> <!-- $font-size-h3:    ceil(($font-size-base * 3.75));   ~60px -->
+<h4>h4. Company heading</h4> <!-- $font-size-h4:    ceil(($font-size-base * 1.25));   ~20px -->
+<h5>h5. Company heading</h5> <!-- $font-size-h5:    ceil(($font-size-base * 1.125));  ~18px -->
+        </div>
+
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;h1&gt;h1. Company heading&lt;/h1&gt; &lt;!-- $font-size-h1:    floor(($font-size-base * 5));     ~80px --&gt;
+&lt;h2&gt;h2. Company heading&lt;/h2&gt; &lt;!-- $font-size-h2:    floor(($font-size-base * 2.25));  ~36px --&gt;
+&lt;h3&gt;h3. Company heading&lt;/h3&gt; &lt;!-- $font-size-h3:    ceil(($font-size-base * 3.75));   ~60px --&gt;
+&lt;h4&gt;h4. Company heading&lt;/h4&gt; &lt;!-- $font-size-h4:    ceil(($font-size-base * 1.25));   ~20px --&gt;
+&lt;h5&gt;h5. Company heading&lt;/h5&gt; &lt;!-- $font-size-h5:    ceil(($font-size-base * 1.125));  ~18px --&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3 class="styleguide-headings">3.3 <em>Small</em></h3>
+        </header>
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          <h2 id="small-copy">Small copy</h2>
+
+
+          <ul class="styleguide-modifier">
+          </ul>
+        </div>
+
+        <div class="styleguide-element">
+          <h1>h1. Company heading <small>Secondary text</small></h1> <!-- ~65% -->
+<h2>h2. Company heading <small>Secondary text</small></h2> <!-- ~65% -->
+<h3>h3. Company heading <small>Secondary text</small></h3> <!-- ~65% -->
+<h4>h4. Company heading <small>Secondary text</small></h4> <!-- ~65% -->
+        </div>
+
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;h1&gt;h1. Company heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h1&gt; &lt;!-- ~65% --&gt;
+&lt;h2&gt;h2. Company heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h2&gt; &lt;!-- ~65% --&gt;
+&lt;h3&gt;h3. Company heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h3&gt; &lt;!-- ~65% --&gt;
+&lt;h4&gt;h4. Company heading &lt;small&gt;Secondary text&lt;/small&gt;&lt;/h4&gt; &lt;!-- ~65% --&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div class="styleguide-example">
+        <header class="styleguide-example-header styleguide-reset">
+          <h3 class="styleguide-headings">3.3 <em>Body copy</em></h3>
+        </header>
+        <div class="styleguide-description styleguide-markdown-body styleguide-reset">
+          <h2 id="body-copy">Body copy</h2>
+
+
+          <ul class="styleguide-modifier">
+          </ul>
+        </div>
+
+        <div class="styleguide-element">
+          <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
+        </div>
+
+
+        <div class="styleguide-html styleguide-reset">
+          <div class="styleguide-html-highlight">
+            <pre><code class="xml">&lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo. Cum Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. &lt;/p&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="styleguide-footer styleguide-reset styleguide-container">
+    <p>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a>.</p>
+    <p>Designed by <a href="https://github.com/">GitHub</a> , <a href="http://warpspire.com/">Kyle Neath</a></p>
+  </div>
+
+
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="../bower_components/sweetalert/lib/sweet-alert.js"></script>
+  <script src="../bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <!-- endbower -->
+
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+
+  <script src="public/kss.js"></script>
+  <script src="public/highlight.pack.js"></script>
+  <!-- // <script src="public/jquery-1.10.2.min.js"></script> -->
+  <script src="public/styleguide.js"></script>
+
+</body>
+</html>
+
