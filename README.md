@@ -3,7 +3,7 @@
 
 ## Description
 
-Starter repo to make html, css and javascript templates pretty documented for web designer and backend developer
+Starter repo to make html, css and javascript templates development more friendly for your clients.
 
 Template created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
 [*kss-node*](https://github.com/kss-node/kss-node),
