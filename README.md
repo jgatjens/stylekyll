@@ -9,6 +9,20 @@ This example is create with [*jekyll*](https://github.com/shakyShane/jekyll-gulp
 [*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
 [*bootstrap-sass*](https://github.com/twbs/bootstrap-sass).
 
+## Todo List
+
+* Organized gulp task in it's own folder. Maybe somethings like this:
+``` 
+gulp
+   ├── build.js
+   ├── server.js
+   ├── unit-tests.js
+   ├── watch.js
+   └── wiredep.js
+```
+* Create an example without bootstrap-sass. 
+
+
 ## Dependencies
 
 In order to work with the template, you will need to follow tools:
