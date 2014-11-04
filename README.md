@@ -1,7 +1,4 @@
 # Stylekyll  
---------------
-
-## Description
 
 Many of companys that make web design do styleguides to keep standars of colors, fonts, components, etc. We as web developers take those styleguides to actual code (html, css, js). For this reason is that stylekyll was created.
 
