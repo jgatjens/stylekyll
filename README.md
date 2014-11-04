@@ -4,7 +4,7 @@ Many of companys that make web design do styleguides to keep standars of colors,
 
 Stylekyll help you keep track on how many pages have you build, crossbrowser control, generate svg sprites, generate the actual styleguide through *kss-node* and much more.
 
-This example is create with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
+This template was created with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
 [*kss-node*](https://github.com/kss-node/kss-node),
 [*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
 [*bootstrap-sass*](https://github.com/twbs/bootstrap-sass).
@@ -20,7 +20,7 @@ gulp
    ├── watch.js
    └── wiredep.js
 ```
-* Create an example without bootstrap-sass. 
+* Create an template without bootstrap-sass. (susy, skeleton, other)
 
 
 ## Dependencies
@@ -85,7 +85,7 @@ Compiling styleguides
 
 ### Deploy to github pages
 
-We have created a rake task to deploy the templates and the styleguide to gitgub.
+We have created a rake task to deploy the templates and the styleguide to github.
 
     $ rake stylekyll:publish
 
