@@ -1,7 +1,7 @@
 title: stylekyll
 name: stylekyll
 company: freelance
-baseurl: "/github-repo-name"
+baseurl: "/stylekyll"
 description: "starter repo to make html, css and javascript templates pretty documented for web designer and backend developer"
 markdown: redcarpet
 highlighter: pygments # or rouge or null
