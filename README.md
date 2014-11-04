@@ -16,7 +16,6 @@ This template was created with [*jekyll*](https://github.com/shakyShane/jekyll-g
 gulp
    ├── build.js
    ├── server.js
-   ├── unit-tests.js
    ├── watch.js
    └── wiredep.js
 ```
