@@ -3,7 +3,10 @@
 
 ## Description
 
-Starter repo to make html, css and javascript templates development more friendly for your clients.
+Many of companys that make web design do styleguides to keep standars of colors, fonts, components, etc. We as web developers take those styleguides to actual code (html, css, js). For this reason is that stylekyll was created.
+
+Stylekyll help you keep track on how many pages have you build, crossbrowser control, generate svg sprites, generate the actual styleguide through *kss-node* and much more.
+
 This example is create with [*jekyll*](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync),
 [*kss-node*](https://github.com/kss-node/kss-node),
 [*github-styleguide-template*](https://github.com/1026/kss-node-template-such-as-github) and edited to add 
