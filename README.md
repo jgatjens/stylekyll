@@ -58,10 +58,9 @@ In order to work with the template, you will need to follow tools:
     
         $ bundle install
 
-
 * Then you need to install the node dependencies, so run:
 
-        $ npm install --global gulp && npm install --global bower && npm install
+        $ npm install -g gulp && npm install -g bower && npm install --global kss@1.3.0 && npm install
 
 * After installing all ruby and nodes dependencies, you should update the front-end dependencies, so run:
 

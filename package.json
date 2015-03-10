@@ -12,7 +12,6 @@
     "gulp-ruby-sass": "^0.7.0",
     "gulp-shell": "^0.2.10",
     "gulp-svg-sprites": "^1.0.3",
-    "kss": "^1.0.1",
     "wiredep": "^1.8.6"
   },
   "engines": {
