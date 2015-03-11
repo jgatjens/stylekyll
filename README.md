@@ -63,6 +63,7 @@ In order to work with the template, you will need to follow tools:
         $ npm install -g gulp && npm install -g bower && npm install
 
 * Then install kss node version:
+
         npm install --global kss@1.3.0
 
 * After installing all ruby and nodes dependencies, you should update the front-end dependencies, so run:
