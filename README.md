@@ -40,15 +40,15 @@ In order to work with the template, you will need to follow tools:
 
         $ \curl -sSL https://get.rvm.io | bash
 
-* Then update Ruby to the 2.0.0 or higer version 
+* Then update Ruby to the 2.2.0 or higer version 
 
-        $ rvm install 2.0.0
+        $ rvm install 2.2.0
 
-* Choose ^2.0.0 as the default Ruby for RVM
+* Choose ^2.2.0 as the default Ruby for RVM
 
-        $ rvm --default use 2.0.0
+        $ rvm --default use 2.2.0
 
-* Download and install [*Node.JS*](http://nodejs.org/)
+* Download and install [*Node.JS*](http://nodejs.org/) **v0.10.33**.
 
 * With this done, you have to install the following Gem:
     
@@ -60,7 +60,10 @@ In order to work with the template, you will need to follow tools:
 
 * Then you need to install the node dependencies, so run:
 
-        $ npm install -g gulp && npm install -g bower && npm install --global kss@1.3.0 && npm install
+        $ npm install -g gulp && npm install -g bower && npm install
+
+* Then install kss node version:
+        npm install --global kss@1.3.0
 
 * After installing all ruby and nodes dependencies, you should update the front-end dependencies, so run:
 
@@ -82,6 +85,11 @@ Compiling styleguides
 
 
 ### Deploy to github pages
+
+
+We have created a rake task to build the styleguide locally.
+
+    $ rake stylekyll:kss
 
 We have created a rake task to deploy the templates and the styleguide to github.
 
