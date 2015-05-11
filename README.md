@@ -85,16 +85,14 @@ Compiling styleguides
 [*Kss documentation*](http://warpspire.com/kss/syntax/)
 
 
-### Deploy to github pages
+We have created a rake task to build the site and then push it to divshot.
 
+    $ rake stp:build
 
-We have created a rake task to build the styleguide locally.
+### Deploy to divshot services
 
-    $ rake stylekyll:kss
+    $ divshot push
 
-We have created a rake task to deploy the templates and the styleguide to github.
-
-    $ rake stylekyll:publish
-
+[*Getting Started*](http://docs.divshot.com/guides/getting-started)
 
 Thanks

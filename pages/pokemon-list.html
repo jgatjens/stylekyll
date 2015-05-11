@@ -1,9 +1,9 @@
 ---
 layout: default
-name: Pokemon list
-title: Pokemon list
-description: Pokemon list description
-keywords: Pokemon list
+name: Card list
+title: Card list
+description: card list description
+keywords: card list
 status: design
 browsers:
     - { chrome: false }
@@ -24,7 +24,7 @@ browsers:
           <h1>
           <a ui-sref="home" href="#!/">
               <i class="glyphicon glyphicon-chevron-left"></i>
-            </a> Pokemon <small>List</small>
+            </a> Card <small>List</small>
           </h1>
         </div>
         <input type="text" ng-model="search.name" class="form-control ng-pristine ng-valid" placeholder="Search for Pet">
@@ -37,11 +37,11 @@ browsers:
       </div>
     </div>
 
-    {% include components/pokemon.html %}
+    {% include components/card.html %}
 
-    {% include components/pokemon.html %}
+    {% include components/card.html %}
 
-    {% include components/pokemon.html %}
+    {% include components/card.html %}
 
   </div>
 </div>

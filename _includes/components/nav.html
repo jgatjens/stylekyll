@@ -1,14 +1,14 @@
 <div class="header" ng-vet-header="">
-  <h3 class="company pull-left"><img src="{{site.baseurl}}/assets/img/logo.png" alt="logo"></h3>
+  <h3 class="company pull-left"><img src="/assets/img/logo.png" alt="logo"></h3>
   <ul id="main-nav" class="nav nav-pills pull-right" ng-show="user.isAuthenticated" ng-vet-nav="">
-  <li ui-sref-active="active" class=""><a ui-sref="home" href="#!/"><i class="glyphicon glyphicon-home"></i></a></li>
+  <li class=""><a ui-sref="home" href="#!/"><i class="glyphicon glyphicon-home"></i></a></li>
   <li class="dropdown">
     <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pokemons <span class="caret"></span></a>
     <ul class="dropdown-menu" role="menu">
-      <li ui-sref-active="active" class=""><a ui-sref="pets.new" href="#!/pokemon/new">New Pokemon</a></li>
+      <li class=""><a ui-sref="pets.new" href="#!/pokemon/new">New Pokemon</a></li>
       <li class="divider"></li>
-      <li ui-sref-active="active" class="active"><a ui-sref="pets.list" href="#!/pokemon/list">List</a></li>
-      <li ui-sref-active="active" class=""><a ui-sref="pets.record" href="#!/pokemon/record">New record</a></li>
+      <li class="active"><a ui-sref="pets.list" href="#!/pokemon/list">List</a></li>
+      <li class=""><a ui-sref="pets.record" href="#!/pokemon/record">New record</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -37,9 +37,9 @@
   <li class="dropdown">
     <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">jgatjens <span class="caret"></span></a>
     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-      <li ui-sref-active="active" class=""><a ui-sref="profile" href="#!/profile">Account settings</a></li>
+      <li class=""><a ui-sref="profile" href="#!/profile">Account settings</a></li>
       <li class="divider"></li>
-      <li ui-sref-active="active" class=""><a ui-sref="notification" href="#!/notification">Notification Center</a></li>
+      <li class=""><a ui-sref="notification" href="#!/notification">Notification Center</a></li>
       <li><a href="#">Contact us</a></li>
       <li class="divider"></li>
       <li><a ui-sref="login" ng-click="logout()" href="#!/login">Logout</a></li>

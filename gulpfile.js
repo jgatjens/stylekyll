@@ -14,7 +14,7 @@ var config = {
  */
 gulp.task('jekyll-build', function (cb) {
   browserSync.notify(config.messages);
-  return cp.spawn('jekyll', ['build','--config','_config.dev.yml'], {stdio: 'inherit'})
+  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
     .on('close', cb);
 });
 
@@ -38,7 +38,7 @@ gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
 
 
 // SVG Icons
-gulp.task('svg', function () {
+gulp.task('svg', ['svg-kss'], function () {
     return gulp.src(config.assetsFolder + '/_svg/*.svg')
       .pipe($.svgSprites({
           preview: false, // no preview
@@ -64,11 +64,13 @@ var wiredep = require('wiredep').stream;
 gulp.task('wiredep', function () {
 
   // includes dependencies in jekyll include folder
-  // copy manualy and replace it with {{page.relative}}
   // until we find the way to make it
   gulp.src('_includes/*.html')
-    .pipe(wiredep())
+    .pipe(wiredep({
+      ignorePath: '..'
+    }))
     .pipe(gulp.dest('_includes'));
+
 
   // template-kss
   // Also includes the same dependencies in the styleguide main file.
