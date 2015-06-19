@@ -87,7 +87,7 @@ Compiling styleguides
 
 We have created a rake task to build the site and then push it to divshot.
 
-    $ rake stp:build
+    $ rake task:build
 
 ### Deploy to divshot services
 
